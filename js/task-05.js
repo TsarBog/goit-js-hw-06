@@ -1,16 +1,14 @@
-const selectors = {
+const selectorsInput = {
     input: document.querySelector("#name-input"),
-    output: document.querySelector("#name-output"),
-    form: document.querySelector(".login-form"),
+    output: document.querySelector("#name-output"), 
 }
-console.log(selectors)
 
-selectors.input.addEventListener('input', handlerQuery);
+selectorsInput.input.addEventListener('input', handlerInput);
 
-function handlerQuery(evt) {
-    selectors.output.textContent = evt.target.value.trim()
-}
+function handlerInput(evt) {
+    selectorsInput.output.textContent = evt.target.value.trim()
+
 if (!evt.target.value.trim()) {
-    selectors.output.textContent = "Anonymous!"
-    
+    selectorsInput.output.textContent = "Anonymous"
+    }
 }
